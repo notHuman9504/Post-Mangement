@@ -1,0 +1,31 @@
+/* .post::-webkit-scrollbar{
+    background-color: transparent;
+    visibility: hidden;
+    width: 5px;
+    height: 5px;
+} */
+
+/* .post::-webkit-scrollbar-thumb{
+    background-color: rgb(104, 104, 104);
+    width: "5px";
+    border-radius: 5px;
+} */
+
+/* *::-webkit-resizer{ background-color: pink ;
+    
+} */
+
+/* ::-webkit-resizer {
+  
+    background-color: black;
+    border-radius:50% ;
+
+    
+} */
+
+
+/* -webkit-resizer::after{content: "hello"; 
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+} */
