@@ -1,0 +1,20 @@
+{
+  "name": "middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "exports": {
+    "./auth": "./src/auth.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "common":"*",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5"
+  }
+}
