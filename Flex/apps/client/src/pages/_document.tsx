@@ -10,7 +10,7 @@ export default function Document() {
           boxSizing: "border-box",
           color: "white",
           height:"100vh",
-          backgroundImage:"linear-gradient(-45deg, gray, black)",
+          backgroundImage:"linear-gradient(-90deg, gray, black)",
         }}
       >
         <Main />

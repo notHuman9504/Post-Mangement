@@ -1,17 +1,12 @@
 import type { AppProps } from 'next/app'
-import {AppBar} from "ui/comp"
-import { useRouter } from 'next/router'
-import { BASE_URL } from '@/config'
+import { RecoilRoot } from 'recoil'
+import { InitUser } from '@/comp/inituser'
+import Appbar from '@/comp/Appbar'
 export default function App({Component,pageProps}:AppProps){
-    const router = useRouter()
-    return (<div>
-        <AppBar onSignup={()=>{
-            router.push(`${BASE_URL}/signup`)
-        }}
-        onLogIn={()=>{
-            router.push(`${BASE_URL}/login`)
-        }}
-        ></AppBar>
+  
+    return (<RecoilRoot>
+        <Appbar></Appbar>
+        <InitUser></InitUser>
         <Component {...pageProps} />
-    </div>)
+        </RecoilRoot>)
 }

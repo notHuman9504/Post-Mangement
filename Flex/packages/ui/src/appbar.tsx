@@ -2,8 +2,10 @@
 // #1976d2
 import { Typography, Button } from "@mui/material";
 export function AppBar(props:{
+    username : string
     onSignup :()=>void,
-    onLogIn :()=>void
+    onLogIn :()=>void,
+    onLogOut :()=>void
 }) {
   return (
     <>
@@ -34,14 +36,14 @@ export function AppBar(props:{
             </Typography>
           </div>
           <div>
-            <Button
+            {!props.username && <> <Button
               variant="contained"
               style={{
                 boxShadow: "none",
                 margin: "10px",
                 border: "1px solid black",
               }}
-              onClick={()=>{
+              onClick={async()=>{
                 props.onLogIn();
               }}
             >
@@ -54,12 +56,35 @@ export function AppBar(props:{
                 margin: "10px",
                 border: "1px solid black",
               }}
-              onClick={()=>{
+              onClick={async()=>{
                 props.onSignup();
               }}
             >
               Sign Up
+            </Button></>}
+            {props.username && <> <Button
+              variant="text"
+              style={{
+                boxShadow: "none",
+                margin: "10px",
+                color:"white"
+              }}
+            >
+              {props.username}
             </Button>
+            <Button
+              variant="contained"
+              style={{
+                boxShadow: "none",
+                margin: "10px",
+                border: "1px solid black",
+              }}
+              onClick={async()=>{
+                props.onLogOut();
+              }}
+            >
+              Log Out
+            </Button></>}
           </div>
         </div>
       </div>
